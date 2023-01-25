@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
@@ -7,16 +6,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const employmentCategories = [{
-    name: 'Full-time',
-    id: 'full-time'
-  }, {
-    name: 'Part-time and seasonal medical eligible',
-    id: 'part-time-medical'
-  }, {
-    name: 'Part-time and seasonal non-medical eligible',
-    id: 'part-time-non-medical'
-  }]
 
   return (
     <>
@@ -27,24 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <ul>
-        { employmentCategories.map(category => {
-          return (
-            <li key={category.id}>
-              <Link
-                href={{
-                  pathname: '/[id]',
-                  query: {id: category.id},
-                }}
-                >
-                {category.name}
-              </Link>
-            </li>
-          )
-        })}
-      </ul><br /><br />
+<br /><br />
       2023 benefits guide Focused on your well-being.<br/>
-      At Best Buy, we want to help you live a happy, healthy and productive life—at work, and at home with those who matter most. That's why we offer a range of benefits that support your overall well-being: physical, mental, financial and work-life balance.<br/><br/>
+      At Best Buy, we want to help you live a happy, healthy and productive life—at work, and at home with those who matter most. That&apos;s why we offer a range of benefits that support your overall well-being: physical, mental, financial and work-life balance.<br/><br/>
       </main>
     </>
   )
